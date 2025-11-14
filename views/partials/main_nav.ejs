@@ -1,18 +1,25 @@
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<!-- Main navigation bar displayed at the top of every page -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
-    <a class="navbar-brand" href="/">Express Portfolio Website</a>
+    <!-- Name on navbar "Shayaan Qureshi" -->
+    <a class="navbar-brand" href="/">Shayaan Qureshi</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        
+        <!-- Home link -->
         <li class="nav-item">
+          <!-- EJS logic to highlight current page based on title value passed from route -->
           <% if (title == "Home") { %>
           <a class="nav-link active" aria-current="page" href="/home"><i class="fa-solid fa-lg fa-house"></i> Home</a>
           <% } else { %>
             <a class="nav-link" aria-current="page" href="/home"><i class="fa-solid fa-lg fa-house"></i> Home</a>
           <% } %>
         </li>
+        
+        <!-- About Me link -->
         <li class="nav-item">
           <% if (title == "About Me") { %>
           <a class="nav-link active" aria-current="page" href="/about"><i class="fa-solid fa-lg fa-circle-info"></i> About Me</a>
@@ -20,6 +27,8 @@
             <a class="nav-link" aria-current="page" href="/about"><i class="fa-solid fa-lg fa-circle-info"></i> About Me</a>
           <% } %>
         </li>
+        
+        <!-- Projects link -->
         <li class="nav-item">
           <% if (title == "Projects") { %>
           <a class="nav-link active" aria-current="page" href="/projects"><i class="fa-solid fa-lg fa-diagram-project"></i> Projects</a>
@@ -27,6 +36,8 @@
             <a class="nav-link" aria-current="page" href="/projects"><i class="fa-solid fa-lg fa-diagram-project"></i> Projects</a>
           <% } %>
         </li>
+        
+        <!-- Contact Me link -->
         <li class="nav-item">
           <% if (title == "Contact Me") { %>
           <a class="nav-link active" aria-current="page" href="/contact"><i class="fa-solid fa-lg fa-phone"></i> Contact Me</a>

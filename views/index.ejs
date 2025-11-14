@@ -1,5 +1,163 @@
 <%- include ./partials/header.ejs %>
 <%- include ./partials/main_nav.ejs %>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %> page</p>
+
+<!-- Main content area -->
+<main class="container mt-4">
+  <!-- Page heading -->
+  <h1 class="mb-4"><%= title %></h1>
+
+  <% /* Home page content */ %>
+  <% if (title === "Home") { %>
+    <section class="mb-4">
+      <p>
+        <!-- Short intro -->
+        Welcome to my portfolio. Use the navigation above to learn more
+        about me, my projects, or to get in touch!
+      </p>
+    </section>
+
+    <!-- Overview cards -->
+    <section class="row g-3">
+      <div class="col-md-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h2 class="h5 card-title">About Me</h2>
+            <p class="card-text">
+              A short bio about me and my key skills.
+            </p>
+            <a href="/about" class="btn btn-outline-primary btn-sm">Learn more</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h2 class="h5 card-title">Projects</h2>
+            <p class="card-text">
+              Some recent projects I have completed recently.
+            </p>
+            <a href="/projects" class="btn btn-outline-primary btn-sm">View projects</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h2 class="h5 card-title">Contact</h2>
+            <p class="card-text">
+              Questions? Feel free to reach out!
+            </p>
+            <a href="/contact" class="btn btn-outline-primary btn-sm">Contact me</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  <% } %>
+
+  <% /* About Me page content */ %>
+  <% if (title === "About Me") { %>
+    <section class="mb-4">
+      <p>
+        I am a 2nd-year Networking & IT Security student enrolled in Ontario
+        Tech University with strong interests in web design and cybersecurity.
+        I enjoy turning ideas into actionable work!
+      </p>
+    </section>
+
+    <!-- Skills section -->
+    <section>
+      <h2 class="h5">Key Skills</h2>
+      <ul>
+        <li>Programming languages: Java, Python, bash, HTML, CSS, and JavaScript.</li>
+        <li>Web development tools: NodeJS, Express, Font Awesome, MongoDB.</li>
+        <li>Version Control: Knowledge and experience with GitHub.</li>
+      </ul>
+    </section>
+  <% } %>
+
+  <% /* Projects page content */ %>
+  <% if (title === "Projects") { %>
+    <section class="mb-3">
+      <p>
+        Here are some of my best projects from the past year.
+      </p>
+    </section>
+
+    <section class="row g-3">
+      <!-- Networking Topology Design -->
+      <div class="col-md-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h2 class="h5 card-title">Networking Topology Design</h2>
+            <p class="card-text">
+              Designed and tested a functional networking topology.
+              Used routing methods including static routing and BGP.
+              Completed with a final report on the project that
+              included detailed methods and reasons for tunneling and
+              cryptographic measures.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- RISC-V Fibonacci Generator -->
+      <div class="col-md-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h2 class="h5 card-title">RISC-V Fibonacci Generator</h2>
+            <p class="card-text">
+              Developed a Fibonacci number generator using RISC-V. Supplemented
+              with performance metrics and a final group report.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ARMv7 Assembly Calculator -->
+      <div class="col-md-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h2 class="h5 card-title">ARMv7 Assembly Calculator</h2>
+            <p class="card-text">
+              Developed an assembly calculator with ARMv7. Completed as a
+              group effort and finalized a report with the project.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  <% } %>
+
+  <% /* Contact Me page content */ %>
+  <% if (title === "Contact Me") { %>
+    <section class="mb-3">
+      <p>
+        Feel free to reach out to me using my contact information below.
+        I usually respond within 1-2 business days.
+      </p>
+    </section>
+
+    <!-- Contact details -->
+    <section>
+      <h2 class="h5">Get in touch:</h2>
+      <ul class="list-unstyled">
+        <li>
+          <strong>Email:</strong>
+          <a href="mailto:shayaan.qureshi@ontariotechu.net">shayaan.qureshi@ontariotechu.net</a>
+        </li>
+        <li>
+          <strong>Phone:</strong>
+          <a href="tel:+11234567890">+1 (123) 456-7890</a>
+        </li>
+      </ul>
+      <p class="mt-2">
+        For business inquiries, please contact me at my GitHub or
+        LinkedIn page at the bottom.
+      </p>
+    </section>
+  <% } %>
+</main>
+
 <%- include ./partials/footer.ejs %>
