@@ -7,6 +7,7 @@ https://github.com/ennmax/Assignment2-ExpressPortfolioSite
 
 ## Render link
 https://assignment2-expressportfoliosite.onrender.com/
+**Note:** Render does not always load my website correctly ("Not found" error, icons do not load). If there is an issue, please keep refreshing until it is loaded correctly.
 
 ## External code used
 - Lectures 7 & 8
